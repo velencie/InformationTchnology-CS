@@ -29,7 +29,7 @@ namespace TASK_2
     {
       double x = double.Parse(textBox1.Text);
 
-      if (x <= 0)
+      if ((x <= 0) | ((x.GetType() != typeof(double)))
       {
         MessageBox.Show("Недопустимое значение");
       }
