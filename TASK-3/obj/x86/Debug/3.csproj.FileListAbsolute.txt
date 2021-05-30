@@ -1,0 +1,4 @@
+C:\Users\Vlada\Documents\GitHub\InformationTechnology-CS\TASK-3\obj\x86\Debug\3.csprojAssemblyReference.cache
+C:\Users\Vlada\Documents\GitHub\InformationTechnology-CS\TASK-3\obj\x86\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Vlada\Documents\GitHub\InformationTechnology-CS\TASK-3\obj\x86\Debug\3.csproj.GenerateResource.cache
+C:\Users\Vlada\Documents\GitHub\InformationTechnology-CS\TASK-3\obj\x86\Debug\3.csproj.CoreCompileInputs.cache
