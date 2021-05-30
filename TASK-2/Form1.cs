@@ -27,25 +27,34 @@ namespace TASK_2
 
     private void button1_Click(object sender, EventArgs e)
     {
-      double x = double.Parse(textBox1.Text);
-
-      if ((x <= 0) | ((x.GetType() != typeof(double)))
+      double x = 0;
+      do
       {
-        MessageBox.Show("Недопустимое значение");
+        try
+        {
+          x = double.Parse(textBox1.Text);
+          if (x <= 0 | x == 1)
+          {
+            if (x <= 0) MessageBox.Show("Недопустимое значение");
+            if (x == 1) MessageBox.Show("Делить на ноль нельзя");
+          }
+          else
+          {
+            textBox2.Text += Environment.NewLine + "При x = " + x.ToString();
+            double y = (2 * Math.Log(x) * Math.Cos(2 * x) - (3 * ((Math.Pow(x + 1, 2)) / (x - 1))) / (2 + Math.Sqrt(x)));
+            textBox2.Text += Environment.NewLine +
+            "Результат y = " + y.ToString();
+          }
+          break;
+        }
+        catch (FormatException)
+        {
+          MessageBox.Show("Неверный формат ввода. Введите число.");
+          textBox1.Text = "0";
+          break;
+        }
       }
-      if (x == 1)
-      {
-        MessageBox.Show("Делить на ноль нельзя");
-      }
-      else
-      {
-        textBox2.Text += Environment.NewLine +
-      "При x = " + x.ToString();
-
-        double y = (2 * Math.Log(x) * Math.Cos(2 * x) - (3 * ((Math.Pow(x + 1, 2)) / (x - 1))) / (2 + Math.Sqrt(x)));
-        textBox2.Text += Environment.NewLine +
-        "Результат y = " + y.ToString();
-      }
+      while (true);
     }
     private void textBox2_TextChanged(object sender, EventArgs e)
     {
